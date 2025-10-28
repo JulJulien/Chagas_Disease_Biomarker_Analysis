@@ -20,10 +20,10 @@ patients.
 ## 🎯 Objectives
 
 -   Determine **which biomarkers can diagnose** Chagas Disease
-    (distinguish healthy vs. infected).\
+    (distinguish healthy vs. infected).\=
 -   Identify **which biomarkers can predict** symptom severity
-    (asymptomatic vs. symptomatic).\
--   Evaluate **Serum vs. Plasma** biomarker reliability.\
+    (asymptomatic vs. symptomatic).\=
+-   Evaluate **Serum vs. Plasma** biomarker reliability.
 -   Provide a **data-driven shortlist of biomarkers** for potential
     diagnostic blood test development.
 
@@ -38,12 +38,12 @@ patients.
   **SYM**    Symptomatic Subjects (infected with symptoms)
 
 -   **Subjects:** 42 total
-    -   12 NHS\
-    -   15 ASYM\
-    -   15 SYM\
+    -   12 NHS
+    -   15 ASYM
+    -   15 SYM
 -   **Biomarkers:**
     -   12 Protein Parameters × 2 Blood Sources (Serum, Plasma) → 24
-        total\
+        total
     -   6 Mitochondrial DNA (mtDNA) types
 
 **Goal:** Identify biomarkers that distinguish between NHS vs. infected
@@ -63,7 +63,7 @@ patients.
 
 -   Converted long format → wide format for machine learning.
 -   Encoded labels for classification:
-    -   `NHS` = 0 or 1 for presence/absence of disease\
+    -   `NHS` = 0 or 1 for presence/absence of disease
     -   `SYM` = 0 or 1 for symptom presence
 -   Cleaned duplicates, fixed missing values, and standardized biomarker
     names.
@@ -71,7 +71,7 @@ patients.
 ### 3. **Feature Engineering**
 
 -   Created biomarkers such as:
-    -   `Copeptin_Serum`, `Copeptin_Plasma`, `PARP1_Serum`, etc.\
+    -   `Copeptin_Serum`, `Copeptin_Plasma`, `PARP1_Serum`, etc.
 -   Logged mtDNA values to stabilize variance.
 -   Combined datasets for unified analysis.
 
@@ -80,7 +80,7 @@ patients.
 ## 🔍 Exploratory Data Analysis (EDA)
 
 -   **Boxplots:** compared distributions of each biomarker across the
-    three symptom groups.\
+    three symptom groups.
 -   **Findings:**
     -   Most biomarkers clearly separated NHS from infected subjects →
         strong **diagnostic** potential.
@@ -96,10 +96,10 @@ patients.
 ### Approach
 
 -   **Binary Logistic Regression** models built per biomarker:
-    -   **Diagnostic:** NHS (0/1)\
-    -   **Prognostic:** SYM (0/1)\
--   **Performance Metric:** ROC--AUC\
--   **Validation:** 5-fold Stratified Cross-Validation\
+    -   **Diagnostic:** NHS (0/1)
+    -   **Prognostic:** SYM (0/1)
+-   **Performance Metric:** ROC--AUC
+-   **Validation:** 5-fold Stratified Cross-Validation
 -   **Classification Rules:** \| AUC Range \| Interpretation \|
     \|------------\|----------------\| \| ≥ 0.9 \| Excellent \| \|
     0.8--0.9 \| Good \| \| \< 0.8 \| Weak/Not Predictive \|
@@ -145,9 +145,9 @@ biomarkers** (both diagnostic & prognostic).
 
 ## 📈 Visualization Highlights
 
--   **Boxplots:** Biomarker distribution by symptom group\
--   **Lollipop plots:** ROC--AUC per biomarker\
--   **Barplots:** Diagnostic vs. Prognostic classification categories\
+-   **Boxplots:** Biomarker distribution by symptom group
+-   **Lollipop plots:** ROC--AUC per biomarker
+-   **Barplots:** Diagnostic vs. Prognostic classification categories
 -   **Comparative charts:** Serum vs Plasma, Protein vs mtDNA
 
 ------------------------------------------------------------------------
@@ -168,11 +168,11 @@ biomarkers** (both diagnostic & prognostic).
 ## ❓ Research Questions for Geneticists
 
 1.  Why do Serum and Plasma yield similar results --- was this expected
-    biologically?\
+    biologically?
 2.  Would a minimal-biomarker test (e.g., 3--5 features) be clinically
-    viable?\
+    viable?
 3.  Are mtDNA-based assays easier or more cost-effective than
-    protein-based ones?\
+    protein-based ones?
 4.  Should diagnostic and prognostic biomarkers be **mutually
     exclusive** for clarity in test results?
 
@@ -180,11 +180,11 @@ biomarkers** (both diagnostic & prognostic).
 
 ## 🧾 Tech Stack
 
--   **Language:** Python\
--   **Libraries:**\
+-   **Language:** Python
+-   **Libraries:**
     `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`,
-    `plotnine`, `statsmodels`\
--   **Environment:** Jupyter Notebook\
+    `plotnine`, `statsmodels`
+-   **Environment:** Jupyter Notebook
 -   **ML Model:** Logistic Regression (cross-validated)
 
 ------------------------------------------------------------------------
@@ -209,11 +209,11 @@ jupyter notebook ChagasDisease_Biomarker_Analysis.ipynb
 
 ## 🧃 Author
 
-**Carlos \[JulJulien\]**\
+**Carlos \[JulJulien\]**
 📫 *Data Scientist focused on biomedical machine learning and
-diagnostics research.*\
+diagnostics research.*
 - 🧩 Research Interests: Bioinformatics, Predictive Modeling, Medical
-AI\
+AI
 - 🔗 [GitHub](https://github.com/JulJulien) \|
 [LinkedIn](https://www.linkedin.com/in/)
 
@@ -222,9 +222,9 @@ AI\
 ## 🌟 Future Work
 
 -   Integrate **Random Forest** and **XGBoost** models for non-linear
-    classification.\
+    classification.
 -   Conduct **feature selection (SHAP / Recursive Elimination)** for
-    biomarker ranking.\
--   Validate models on **real-world patient samples**.\
+    biomarker ranking.
+-   Validate models on **real-world patient samples**.
 -   Develop a **prototype diagnostic dashboard** for medical
     practitioners.
