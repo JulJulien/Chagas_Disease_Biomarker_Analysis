@@ -31,8 +31,6 @@ patients.
 
 ## 🧠 Research Context
 
-  Group      Description
-  ---------- -----------------------------------------------
   **NHS**    Normal Healthy Subjects (no Chagas Disease)
   **ASYM**   Asymptomatic Subjects (infected, no symptoms)
   **SYM**    Symptomatic Subjects (infected with symptoms)
@@ -111,8 +109,7 @@ patients.
 ### 🧪 **Protein Parameters (24 total)**
 
   -----------------------------------------------------------------------
-  Classification                Examples             Mean AUC
-  ----------------------------- -------------------- --------------------
+  **Classification                Examples             Mean AUC**
   **Perfect Diagnostic          Copeptin, PARP1,     1.000
   (AUC=1.0)**                   etOhDG               
 
@@ -124,7 +121,6 @@ patients.
 
   **Both Diagnostic +           Copeptin,            ≥0.9
   Prognostic**                  Endostatin, etOhDG   
-  -----------------------------------------------------------------------
 
 🧩 *Serum vs Plasma:* No statistically significant differences detected.
 
@@ -132,8 +128,7 @@ patients.
 
 ### 🧬 **Mitochondrial DNA (6 biomarkers)**
 
-  Classification        Biomarkers             Mean AUC
-  --------------------- ---------------------- ------------
+  **Classification        Biomarkers             Mean AUC**
   **Diagnostic**        mtND1, mtATP6          0.81--0.84
   **Prognostic**        mtND1, mtND5, mtATP6   0.92--1.0
   **Not Significant**   mtCOII, mtCytB         \<0.6
@@ -212,8 +207,6 @@ jupyter notebook ChagasDisease_Biomarker_Analysis.ipynb
 **Carlos \[JulJulien\]**
 📫 *Data Scientist focused on biomedical machine learning and
 diagnostics research.*
-- 🧩 Research Interests: Bioinformatics, Predictive Modeling, Medical
-AI
 - 🔗 [GitHub](https://github.com/JulJulien) \|
 [LinkedIn](https://www.linkedin.com/in/)
 
