@@ -49,66 +49,10 @@ patients.
 
 ------------------------------------------------------------------------
 
-## ⚙️ Data Pipeline
-
-### 1. **Data Sources**
-
--   `proteinparam.xlsx` -- 12 Protein Parameters from Plasma & Serum
-    samples\
--   `MitochondrialDNA.xlsx` -- 6 mtDNA expression features
-
-### 2. **Preprocessing**
-
--   Converted long format → wide format for machine learning.
--   Encoded labels for classification:
-    -   `NHS` = 0 or 1 for presence/absence of disease
-    -   `SYM` = 0 or 1 for symptom presence
--   Cleaned duplicates, fixed missing values, and standardized biomarker
-    names.
-
-### 3. **Feature Engineering**
-
--   Created biomarkers such as:
-    -   `Copeptin_Serum`, `Copeptin_Plasma`, `PARP1_Serum`, etc.
--   Logged mtDNA values to stabilize variance.
--   Combined datasets for unified analysis.
-
-------------------------------------------------------------------------
-
-## 🔍 Exploratory Data Analysis (EDA)
-
--   **Boxplots:** compared distributions of each biomarker across the
-    three symptom groups.
--   **Findings:**
-    -   Most biomarkers clearly separated NHS from infected subjects →
-        strong **diagnostic** potential.
-    -   Fewer biomarkers cleanly separated SYM from ASYM → weaker
-        **prognostic** signal.
-    -   Plasma and Serum results were statistically similar → both valid
-        for testing.
-
-------------------------------------------------------------------------
-
-## 🧮 Modeling & Evaluation
-
-### Approach
-
--   **Binary Logistic Regression** models built per biomarker:
-    -   **Diagnostic:** NHS (0/1)
-    -   **Prognostic:** SYM (0/1)
--   **Performance Metric:** ROC--AUC
--   **Validation:** 5-fold Stratified Cross-Validation
--   **Classification Rules:** \| AUC Range \| Interpretation \|
-    \|------------\|----------------\| \| ≥ 0.9 \| Excellent \| \|
-    0.8--0.9 \| Good \| \| \< 0.8 \| Weak/Not Predictive \|
-
-------------------------------------------------------------------------
-
 ## 🧩 Results Summary
 
 ### 🧪 **Protein Parameters (24 total)**
 
-  -----------------------------------------------------------------------
   **Classification                Examples             Mean AUC**
   **Perfect Diagnostic          Copeptin, PARP1,     1.000
   (AUC=1.0)**                   etOhDG               
@@ -123,8 +67,6 @@ patients.
   Prognostic**                  Endostatin, etOhDG   
 
 🧩 *Serum vs Plasma:* No statistically significant differences detected.
-
-------------------------------------------------------------------------
 
 ### 🧬 **Mitochondrial DNA (6 biomarkers)**
 
@@ -155,8 +97,6 @@ biomarkers** (both diagnostic & prognostic).
     -   Myostatin, mtATP6, mtND1
 -   **Dual-Purpose Biomarkers (Diagnostic + Prognostic):**
     -   Copeptin, Endostatin, etOhDG, mtATP6, mtND1
--   **Non-significant Biomarkers:**
-    -   mtCOII, mtCytB
 
 ------------------------------------------------------------------------
 
@@ -173,51 +113,3 @@ biomarkers** (both diagnostic & prognostic).
 
 ------------------------------------------------------------------------
 
-## 🧾 Tech Stack
-
--   **Language:** Python
--   **Libraries:**
-    `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`,
-    `plotnine`, `statsmodels`
--   **Environment:** Jupyter Notebook
--   **ML Model:** Logistic Regression (cross-validated)
-
-------------------------------------------------------------------------
-
-## 🚀 How to Run
-
-``` bash
-# 1. Clone the repository
-git clone https://github.com/JulJulien/Chagas_Disease_Biomarker_Analysis.git
-
-# 2. Navigate to the notebook directory
-cd Chagas_Disease_Analysis/notebook
-
-# 3. Install dependencies
-pip install -r requirements.txt
-
-# 4. Launch the notebook
-jupyter notebook ChagasDisease_Biomarker_Analysis.ipynb
-```
-
-------------------------------------------------------------------------
-
-## 🧃 Author
-
-**Carlos \[JulJulien\]**
-📫 *Data Scientist focused on biomedical machine learning and
-diagnostics research.*
-- 🔗 [GitHub](https://github.com/JulJulien) \|
-[LinkedIn](https://www.linkedin.com/in/)
-
-------------------------------------------------------------------------
-
-## 🌟 Future Work
-
--   Integrate **Random Forest** and **XGBoost** models for non-linear
-    classification.
--   Conduct **feature selection (SHAP / Recursive Elimination)** for
-    biomarker ranking.
--   Validate models on **real-world patient samples**.
--   Develop a **prototype diagnostic dashboard** for medical
-    practitioners.
