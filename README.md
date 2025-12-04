@@ -52,6 +52,24 @@ patients.
 (diagnostic) and SYM vs. ASYM (prognostic).
 
 
+## 📊 Data Exploration
+<img width="1800" height="1200" alt="image" src="https://github.com/user-attachments/assets/e068817f-26ba-4402-a4cb-0ba25f1b66b9" />
+<img width="1800" height="1200" alt="image" src="https://github.com/user-attachments/assets/b46db623-68ef-4eea-b9b9-01507b21bb02" />
+
+
+## ⚙️ Methodology
+ 
+- Create a dummy variable 'With Chagas' to encompass SYM and ASYM records.
+  
+For each biomarker:
+- Develop a Logisitic Regression model that takes in 42 records and biomarker expression as a continuous feature, and use
+  the symptom classification as the categorical target.
+- For Logistic Regression models that test for Diagnostic potential use NHS / With Chagas as the target.
+- For Logistic Regression models that test for Prognostic potential use SYM / ASYM as the target.
+- ROC and AUC Evaluation
+- Cross Validation
+
+
 ## 🧩 Results Summary
 
 ### 🧪 **Protein Parameters (24 total)**
@@ -71,6 +89,9 @@ patients.
   **Both Diagnostic & Prognostic** :          
   Copeptin, Endostatin, etOhDG   
 
+  <img width="1197" height="593" alt="image" src="https://github.com/user-attachments/assets/6a33efc6-094a-4a2c-9b77-92e6efe02191" />
+
+
 🧩 *Serum vs Plasma:* No statistically significant differences detected.
 
 ### 🧬 **Mitochondrial DNA (6 biomarkers)**
@@ -79,14 +100,13 @@ patients.
   mtND1, mtATP6
   
   Prognostic AUC: 0.92--1.0 : 
-  mtND1, mtND5, mtATP6
-  
-  Not Significant: mtCOII, mtCytB : <0.6
+  mtND1, mtND5, mtATP6, mtCOII, mtCytB
   
 
 🧩 *mtATP6* and *mtND1* stand out as the most reliable **dual
 biomarkers** (both diagnostic & prognostic).
 
+<img width="1197" height="593" alt="image" src="https://github.com/user-attachments/assets/73b0881a-367f-43fd-9eb4-de19e0a5b1de" />
 
 
 ## 🩺 Key Findings
