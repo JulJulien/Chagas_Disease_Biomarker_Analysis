@@ -3,13 +3,17 @@
 ## How to Navigate this Repository
 
 ### 🐍 Python
-To find the .ipynb Jupyter Notebook where the project is written.
+Find the.ipynb Jupyter Notebook ,where the project is written.
 >/Chagas Disease Analysis/notebook
 /ChagasDisease_Biomarker_Analysis.ipynb
 
-In the Chagas Disease Analysis Folder you can also find an
-- src folder containing eda.py and train.py which contain modules used in ChagasDisease_Biomarker_Analysis.ipynb.
-- data folder containing the data sets for protein parameters and mtDNA biomarker expression.
+src folder contain modules used in ChagasDisease_Biomarker_Analysis.ipynb.
+
+>Chagas Disease Analysis/src
+
+data folder contains the data sets for protein parameters and mtDNA biomarker expression.
+
+>Chagas Disease Analysis/src/data
 
 
 ### 🔵 R
