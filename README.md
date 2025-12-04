@@ -1,5 +1,25 @@
 # 🧬 Chagas Disease Biomarker Analysis
 
+## How to Navigate this Repository
+
+### 🐍 Python
+To find the .ipynb Jupyter Notebook where the project is written.
+>/Chagas Disease Analysis/notebook
+/ChagasDisease_Biomarker_Analysis.ipynb
+
+In the Chagas Disease Analysis Folder you can also find an
+- src folder containing eda.py and train.py which contain modules used in ChagasDisease_Biomarker_Analysis.ipynb.
+- data folder containing the data sets for protein parameters and mtDNA biomarker expression.
+
+
+### 🔵 R
+You can find the same project written in R as a qmd file.
+>SIBDS_Chagas_Disease_Biomarkers.qmd
+
+You can also view the R qmd file as a pdf.
+>SIBDS Chagas Disease Project.pdf
+
+
 ## 🩸 Overview
 
 This project develops a **machine learning pipeline** to identify
