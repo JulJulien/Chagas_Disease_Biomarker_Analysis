@@ -3,37 +3,41 @@
 ## 🩸 Overview
 
 This project develops a **machine learning pipeline** to identify
-**diagnostic and prognostic biomarkers** for *Chagas Disease* --- a
+**diagnostic and prognostic biomarkers** for *Chagas Disease*, a
 parasitic infection affecting millions across Latin America and
 responsible for roughly **3 million deaths annually**.
 
 Researchers at the **University of Texas Medical Branch** have
 identified **12 protein parameters** and **6 mitochondrial DNA (mtDNA)
-types** that potentially indicate Chagas infection.\
+types** that potentially indicate Chagas infection.
 Using these biomarkers, this project builds **logistic regression
 models** and applies **cross-validated AUC analysis** to determine which
 biomarkers best classify healthy, symptomatic, and asymptomatic
 patients.
 
-------------------------------------------------------------------------
 
 ## 🎯 Objectives
 
 -   Determine **which biomarkers can diagnose** Chagas Disease
-    (distinguish healthy vs. infected).\=
+    (distinguish healthy vs. infected).
+    
 -   Identify **which biomarkers can predict** symptom severity
-    (asymptomatic vs. symptomatic).\=
+    (asymptomatic vs. symptomatic).
+    
 -   Evaluate **Serum vs. Plasma** biomarker reliability.
+
 -   Provide a **data-driven shortlist of biomarkers** for potential
     diagnostic blood test development.
 
-------------------------------------------------------------------------
 
 ## 🧠 Research Context
 
   **NHS**    Normal Healthy Subjects (no Chagas Disease)
+  
   **ASYM**   Asymptomatic Subjects (infected, no symptoms)
-  **SYM**    Symptomatic Subjects (infected with symptoms)
+  
+  **SYM**    Symptomatic Subjects (infected with symptoms
+  
 
 -   **Subjects:** 42 total
     -   12 NHS
@@ -47,47 +51,43 @@ patients.
 **Goal:** Identify biomarkers that distinguish between NHS vs. infected
 (diagnostic) and SYM vs. ASYM (prognostic).
 
-------------------------------------------------------------------------
 
 ## 🧩 Results Summary
 
 ### 🧪 **Protein Parameters (24 total)**
 
-  **Classification                Examples             Mean AUC**
-  **Perfect Diagnostic          Copeptin, PARP1,     1.000
-  (AUC=1.0)**                   etOhDG               
+  **Perfect Diagnostics AUC = 1** :
+  Copeptin, PARP1, etOhDG               
 
-  **Strong Diagnostic           Endostatin, HnRNPA1  0.91--0.98
-  (AUC≥0.9)**                                        
+  **Strong Diagnostic AUC ≥0.9** :
+  Endostatin, HnRNPA1  0.91--0.98
 
-  **Perfect Prognostic          Myostatin, Copeptin, 1.000
-  (AUC=1.0)**                   etOhDG               
+  **Perfect Prognostic AUC = 1** :          
+  Myostatin, Copeptin, 1.000
+  
+  **Strong Prognostic AUC = 0.9**:
+  etOhDG               
 
-  **Both Diagnostic +           Copeptin,            ≥0.9
-  Prognostic**                  Endostatin, etOhDG   
+  **Both Diagnostic & Prognostic** :          
+  Copeptin, Endostatin, etOhDG   
 
 🧩 *Serum vs Plasma:* No statistically significant differences detected.
 
 ### 🧬 **Mitochondrial DNA (6 biomarkers)**
 
-  **Classification        Biomarkers             Mean AUC**
-  **Diagnostic**        mtND1, mtATP6          0.81--0.84
-  **Prognostic**        mtND1, mtND5, mtATP6   0.92--1.0
-  **Not Significant**   mtCOII, mtCytB         \<0.6
+  Diagnostic AUC: 0.81--0.84 : 
+  mtND1, mtATP6
+  
+  Prognostic AUC: 0.92--1.0 : 
+  mtND1, mtND5, mtATP6
+  
+  Not Significant: mtCOII, mtCytB : <0.6
+  
 
 🧩 *mtATP6* and *mtND1* stand out as the most reliable **dual
 biomarkers** (both diagnostic & prognostic).
 
-------------------------------------------------------------------------
 
-## 📈 Visualization Highlights
-
--   **Boxplots:** Biomarker distribution by symptom group
--   **Lollipop plots:** ROC--AUC per biomarker
--   **Barplots:** Diagnostic vs. Prognostic classification categories
--   **Comparative charts:** Serum vs Plasma, Protein vs mtDNA
-
-------------------------------------------------------------------------
 
 ## 🩺 Key Findings
 
@@ -98,7 +98,6 @@ biomarkers** (both diagnostic & prognostic).
 -   **Dual-Purpose Biomarkers (Diagnostic + Prognostic):**
     -   Copeptin, Endostatin, etOhDG, mtATP6, mtND1
 
-------------------------------------------------------------------------
 
 ## ❓ Research Questions for Geneticists
 
@@ -111,5 +110,4 @@ biomarkers** (both diagnostic & prognostic).
 4.  Should diagnostic and prognostic biomarkers be **mutually
     exclusive** for clarity in test results?
 
-------------------------------------------------------------------------
 
