@@ -98,7 +98,7 @@ For each biomarker:
 
 ## 🧩 Results Summary
 
-### 🧪 **Protein Parameters (24 total)**
+### **Protein Parameters (24 total)**
 
   **Perfect Diagnostics AUC = 1** :
   Copeptin, PARP1, etOhDG               
@@ -118,9 +118,9 @@ For each biomarker:
   <img width="1197" height="593" alt="image" src="https://github.com/user-attachments/assets/6a33efc6-094a-4a2c-9b77-92e6efe02191" />
 
 
-🧩 *Serum vs Plasma:* No statistically significant differences detected.
+  *Serum vs Plasma:* No statistically significant differences detected.
 
-### 🧬 **Mitochondrial DNA (6 biomarkers)**
+### **Mitochondrial DNA (6 biomarkers)**
 
   Diagnostic AUC: 0.81--0.84 : 
   mtND1, mtATP6
@@ -129,7 +129,7 @@ For each biomarker:
   mtND1, mtND5, mtATP6, mtCOII, mtCytB
   
 
-🧩 *mtATP6* and *mtND1* stand out as the most reliable **dual
+  *mtATP6* and *mtND1* stand out as the most reliable **dual
 biomarkers** (both diagnostic & prognostic).
 
 <img width="1197" height="593" alt="image" src="https://github.com/user-attachments/assets/73b0881a-367f-43fd-9eb4-de19e0a5b1de" />
