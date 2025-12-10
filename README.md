@@ -2,7 +2,7 @@
 
 ## How to Navigate this Repository
 
-### 🐍 Python
+### Python
 Find the.ipynb Jupyter Notebook ,where the project is written.
 >/Chagas Disease Analysis/notebook
 /ChagasDisease_Biomarker_Analysis.ipynb
@@ -16,7 +16,7 @@ data folder contains the data sets for protein parameters and mtDNA biomarker ex
 >Chagas Disease Analysis/src/data
 
 
-### 🔵 R
+### R
 You can find the same project written in R as a qmd file.
 >SIBDS_Chagas_Disease_Biomarkers.qmd
 
@@ -24,7 +24,7 @@ You can also view the R qmd file as a pdf.
 >SIBDS Chagas Disease Project.pdf
 
 
-## 🩸 Overview
+## 🩸 Overview & Goals
 
 This project develops a **machine learning pipeline** to identify
 **diagnostic and prognostic biomarkers** for *Chagas Disease*, a
@@ -39,9 +39,7 @@ models** and applies **cross-validated AUC analysis** to determine which
 biomarkers best classify healthy, symptomatic, and asymptomatic
 patients.
 
-
-## 🎯 Objectives
-
+Our goals are:
 -   Determine **which biomarkers can diagnose** Chagas Disease
     (distinguish healthy vs. infected).
     
@@ -77,6 +75,10 @@ patients.
 
 
 ## 📊 Data Exploration
+
+Each classification (red for asymptomatic, blue for symptomatic and white for normal healthy subjects (control))
+These boxplots show each biomarkers expression levels in for each symptom.
+
 <img width="1800" height="1200" alt="image" src="https://github.com/user-attachments/assets/e068817f-26ba-4402-a4cb-0ba25f1b66b9" />
 <img width="1800" height="1200" alt="image" src="https://github.com/user-attachments/assets/b46db623-68ef-4eea-b9b9-01507b21bb02" />
 
