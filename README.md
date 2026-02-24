@@ -11,17 +11,11 @@ src folder contain modules used in ChagasDisease_Biomarker_Analysis.ipynb.
 
 >Chagas Disease Analysis/src
 
-data folder contains the data sets for protein parameters and mtDNA biomarker expression.
-
->Chagas Disease Analysis/src/data
-
 
 ### R
 You can find the same project written in R as a qmd file.
 >SIBDS_Chagas_Disease_Biomarkers.qmd
 
-You can also view the R qmd file as a pdf.
->SIBDS Chagas Disease Project.pdf
 
 
 ## 🩸 Overview & Goals
